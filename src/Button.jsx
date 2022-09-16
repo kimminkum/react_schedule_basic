@@ -1,23 +1,25 @@
 import styled, { css } from "styled-components";
 
-function  Button({children}){
-    return <StyledButton >{children}</StyledButton>
+function  Button({nametag,children}){
+    return (<StyledButton className={nametag}>{children}</StyledButton>);
 }
 
 const StyledButton = styled.button`
-    margin: 0;
-    border: solid 0.5px;
+    margin: 12px;
+    border: solid 0.5px #dddddd;
     cursor:pointer;
     font-size:12px;
-    padding: 2px 4px;
+    padding: 4px 6px;
+    height: 36px;
+    width: 36px;
     border-radius: 6px;
-    background: #0d6efd;
-    color:#ffffff;
+    background: #dddddd;
+    color:#090909;
 
     &:active,
     &:hover,
     &:focus{
-        background:#025ce2;
+        background:#cccccc;
     }
 `;
 

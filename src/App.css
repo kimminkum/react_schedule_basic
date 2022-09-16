@@ -53,6 +53,20 @@ a{
   padding: 0px 12px;
 }
 
+.main .optionbar{
+  margin: 12px 48px;
+  background: rgb(132, 187, 132);
+  border-radius: 12px;
+  padding: 6px;
+  display:flex;
+  justify-content: center;
+}
+
+.schedule {
+  width:80%;
+  background-color: rgb(214, 230, 245);
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
