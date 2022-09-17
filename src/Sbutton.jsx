@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-function Button({ children }){
+function Sbutton({ children }){
     return (
     <StyledButton>{children}</StyledButton>
     );
@@ -15,19 +15,21 @@ let StyledButton = styled.button`
     height: 36px;
     width: 36px;
     border-radius: 6px;
-    background: #eeeeee;
-    color:#090909;
-    opacity: 0.5;
+    background: #070707;
+    color:#ffffff;
+    opacity: 0.8;
     transition: .5s;
 
     &:active,
     &:hover,
-    &:focus
-    &:after{
-        background:rgba(255, 80, 105, .5);
+    &:focus{
+        background:#eeeeee;
+        color:#070707;
         opacity: 1;
         transition: .5s;
+        border-color:black;
+        border-width: 1px;
     }
 `;
 
-export default Button;
+export default Sbutton;

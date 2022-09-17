@@ -67,6 +67,11 @@ a{
   background-color: rgb(214, 230, 245);
 }
 
+.styleClass{
+  color:aquamarine;
+  background: #282c34;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

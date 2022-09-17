@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import styled from "styled-components";
 import Button from "./Button"
+import Sbutton from "./Sbutton"
 import { FaTwitch } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { useState } from 'react';
@@ -17,8 +18,8 @@ function App() {
         </div>
         <div className='header_links'>
           <ul className="header_links_icons">
-            <li><a href="https://www.twitch.tv/"><FaTwitch/></a></li>
-            <li><a href="https://www.youtube.com/"><FaYoutube/></a></li>
+            <li><a href="https://www.twitch.tv/" target='_blank'><FaTwitch/></a></li>
+            <li><a href="https://www.youtube.com/" target='_blank'><FaYoutube/></a></li>
           </ul>
         </div>
       </div>
@@ -26,8 +27,8 @@ function App() {
 
       <div className='main'>
         <div className="optionbar">
-          <Button nametag={'buttons'}>1</Button>
-          <Button nametag={'buttons'}>+</Button>
+          <Button>1</Button>
+          <Button>+</Button>
         </div>
       </div>
 
@@ -37,9 +38,9 @@ function App() {
         </div>
 
         <div className='schedule_option'>
-          <Button nametag={'schedule_button'}>+</Button>
-          <Button nametag={'schedule_button'}>-</Button>
-          <Button nametag={'schedule_button'}><BsFillPencilFill/></Button>
+          <Sbutton>+</Sbutton>
+          <Sbutton>-</Sbutton>
+          <Sbutton><BsFillPencilFill/></Sbutton>
         </div>
       </div>
     </div>
