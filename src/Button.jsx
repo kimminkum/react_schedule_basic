@@ -15,16 +15,18 @@ let StyledButton = styled.button`
     height: 36px;
     width: 36px;
     border-radius: 6px;
-    background: #eeeeee;
-    color:#090909;
-    opacity: 0.5;
+    background: blue;
+    color:#ffffff;
+    opacity: 0.8;
     transition: .5s;
 
     &:active,
     &:hover,
     &:focus
     &:after{
-        background:rgba(255, 80, 105, .5);
+        background:rgba(255, 255, 255, .7);
+        color:rgba(0, 0, 0, 1);
+        font-size:14px;
         opacity: 1;
         transition: .5s;
     }
