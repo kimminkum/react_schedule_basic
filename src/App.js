@@ -1,21 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import styled from "styled-components";
-import Button from "./Button"
-import Sbutton from "./Sbutton"
+import Button from "./Button/Button";
+import Sbutton from "./Button/Sbutton";
+import Board from "./Board";
 import { FaTwitch } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
-import { useState } from 'react';
 import { BsFillPencilFill } from 'react-icons/bs';
 
 
 function App() {
   return (
     <div>
+      {/* 제목과 트위치 유튜브등 자주보는 곳 링크 */}
       <div className="header">
+
+        {/* 제목 */}
         <div className="header_title">
           <h3> 일과 스케줄 표 </h3>
         </div>
+
+        {/* 링크 */}
         <div className='header_links'>
           <ul className="header_links_icons">
             <li><a href="https://www.twitch.tv/" target='_blank'><FaTwitch/></a></li>
@@ -24,8 +28,8 @@ function App() {
         </div>
       </div>
 
-
       <div className='main'>
+        {/* 스케쥴 표 버튼과 생성, 수정, 삭제 버튼  */}
         <div className="optionbar">
           <Button>1</Button>
           <Button>+</Button>
@@ -33,10 +37,12 @@ function App() {
       </div>
 
       <div className='schedule'>
+        {/* 스케쥴 표 */}
         <div className='schedule_table'>
-          <p>HAPPY</p>
+          <Board/>
         </div>
 
+        {/* 스케쥴 표 관련 버튼 */}
         <div className='schedule_option'>
           <Sbutton>+</Sbutton>
           <Sbutton>-</Sbutton>
@@ -46,9 +52,5 @@ function App() {
     </div>
   );
 }
-
-
-//버튼생성 만들어보기
-// 버튼 컴포넌트 에러남
 
 export default App;
