@@ -53,6 +53,7 @@ a{
   padding: 0px 12px;
 }
 
+
 .main .optionbar{
   margin: 12px 48px;
   background: rgb(132, 187, 132);
@@ -63,8 +64,21 @@ a{
 }
 
 .schedule {
-  width:80%;
-  background-color: rgb(214, 230, 245);
+  margin: 6px 48px;
+  width: 92%;
+  padding: 0;
+  background-color: rgb(153, 203, 250);
+  border-radius: 5px;
+}
+
+.schedule .schedule_table{
+  padding:0;
+  width:100%;
+}
+
+.schedule .schedule_option{
+  display: flex;
+  justify-content: end;
 }
 
 .styleClass{

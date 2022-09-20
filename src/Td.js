@@ -1,5 +1,7 @@
 import React from 'react';
 
+//삭제 관련 같은데 삭제하면 에러남
+
 const Td = ({item, handleRemove, handleEdit}) => {
     const onRemove = () => {
         handleRemove(item.id)

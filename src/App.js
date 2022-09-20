@@ -5,7 +5,7 @@ import Sbutton from "./Button/Sbutton";
 import Board from "./Board";
 import { FaTwitch } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
-import { BsFillPencilFill } from 'react-icons/bs';
+import { BsFillPencilFill, BsTable } from 'react-icons/bs';
 
 
 function App() {
@@ -39,15 +39,15 @@ function App() {
       <div className='schedule'>
         {/* 스케쥴 표 */}
         <div className='schedule_table'>
-          <Board/>
+          <Board className='table'/>
         </div>
 
         {/* 스케쥴 표 관련 버튼 */}
-        <div className='schedule_option'>
+        {/* <div className='schedule_option'>
           <Sbutton>+</Sbutton>
           <Sbutton>-</Sbutton>
           <Sbutton><BsFillPencilFill/></Sbutton>
-        </div>
+        </div> */}
       </div>
     </div>
   );

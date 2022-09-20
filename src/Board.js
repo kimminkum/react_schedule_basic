@@ -4,6 +4,8 @@ import Tr from './Tr';
 import Post from './Post';
 import Modal from './Modal';
 
+//보이는 테이블 관련
+
 const Board = () => {
     const [info, setInfo] = useState([]);
     const [selected, setSelected] = useState('');
@@ -88,7 +90,7 @@ const Board = () => {
 
     return (
         <div className='container max-w-screen-lg mx-auto'>
-            <div className='text-xl font-bold mt-5 mb-3 text-center'>고객 정보 리스트</div>
+            {/* <div className='text-xl font-bold mt-5 mb-3 text-center'>고객 정보 리스트</div> */}
             <table className='min-w-full table-auto text-gray-800'>
                 <thead className='justify-between'>
                     <tr className='bg-gray-800'>

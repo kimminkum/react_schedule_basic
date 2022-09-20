@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+//추가하기 관련 add 
+
 const Post = ({onSaveData}) => {
     const [form, setForm] = useState({
         name: '',

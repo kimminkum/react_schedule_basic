@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+//수정하기 관련
+
 const Modal = ({selectedData, handleCancel, handleEditSubmit}) => {
     const [edited, setEdited] = useState(selectedData);
 
@@ -24,7 +26,7 @@ const Modal = ({selectedData, handleCancel, handleEditSubmit}) => {
         bg-black bg-opacity-70'>
             <div className='bg-white rounded shadow-lg w-10/12 md:w-1/3'>
                 <div className='border-b px-4 py-2 flex justify-between items-center'>
-                    <h3 className='font-semibold text-lg'>고객 정보 수정하기</h3>
+                    <h3 className='font-semibold text-lg'>수정하기</h3>
                     <i className='fas fa-times cursor-pointer' onClick={onCancel}></i>
                 </div>
                 <form onSubmit={onSubmitEdit}>
