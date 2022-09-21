@@ -13,14 +13,14 @@ const Board = () => {
 
     //고유 값으로 사용 될 id
     //ref 를 사용하여 변수 담기
-    const nextId = useRef(11);
+    const nextId = useRef(2);
 
 //더미 데이터 호출
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users')
-            .then(res => setInfo(res.data))
-            .catch(err => console.log(err));
-    }, []);
+    // useEffect(() => {
+    //     axios.get('https://jsonplaceholder.typicode.com/users')
+    //         .then(res => setInfo(res.data))
+    //         .catch(err => console.log(err));
+    // }, []);
 
     const handleSave = (data) => {
         //데이터 수정하기(중요)
@@ -29,10 +29,9 @@ const Board = () => {
                 info.map(row => data.id === row.id ? { //가져온 id가 기존 id와 같으면
                     //가져온 데이터 반영
                     id: data.id,
-                    name: data.name,
-                    email: data.email,
-                    phone: data.phone,
-                    website: data.website,
+                    title: data.title,
+                    check: data.check,
+                    schedule: data.schedule,
                 } : row))
         } else { /*바로 추가하기
             데이터 추가하기 방법1
@@ -51,10 +50,9 @@ const Board = () => {
             setInfo(info => info.concat(
                 {
                     id:nextId.current,
-                    name:data.name,
-                    email:data.email,
-                    phone:data.phone,
-                    website:data.website,
+                    title:data.title,
+                    check:data.check,
+                    schedule:data.schedule,
                 }
             ))
             nextId.current += 1;
@@ -69,10 +67,9 @@ const Board = () => {
         setModalOn(true);
         const selectedData = {
             id: item.id,
-            name: item.name,
-            email: item.email,
-            phone: item.phone,
-            website: item.website,
+            title: item.title,
+            check: item.check,
+            schedule: item.schedule,
         };
         console.log(selectedData);
         setSelected(selectedData);
@@ -89,16 +86,15 @@ const Board = () => {
     }
 
     return (
-        <div className='container max-w-screen-lg mx-auto'>
+        <div className='container max-w-screen-2xl  mx-auto'>
             {/* <div className='text-xl font-bold mt-5 mb-3 text-center'>고객 정보 리스트</div> */}
             <table className='min-w-full table-auto text-gray-800'>
                 <thead className='justify-between'>
                     <tr className='bg-gray-800'>
                         <th className="text-gray-300 px-4 py-3">Id.</th>
-                        <th className="text-gray-300 px-4 py-3">Name</th>
-                        <th className="text-gray-300 px-4 py-3">Email</th>
-                        <th className="text-gray-300 px-4 py-3">phone No.</th>
-                        <th className="text-gray-300 px-4 py-3">Website</th>
+                        <th className="text-gray-300 px-4 py-3">title</th>
+                        <th className="text-gray-300 px-4 py-3">check</th>
+                        <th className="text-gray-300 px-4 py-3">Schedule</th>
                         <th className="text-gray-300 px-4 py-3">Edit</th>
                         <th className="text-gray-300 px-4 py-3">Delete</th>
                     </tr>

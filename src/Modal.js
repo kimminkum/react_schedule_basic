@@ -32,14 +32,12 @@ const Modal = ({selectedData, handleCancel, handleEditSubmit}) => {
                 <form onSubmit={onSubmitEdit}>
                     <div class="p-3">
                         <div>ID: {edited.id}</div>
-                        <div>Name: <input className='border-2 border-gray-100' type="text" name="name" 
-                        value={edited.name} onChange={onEditChange} /></div>
-                        <div>Email: <input className='border-2 border-gray-100' type="text" name="email" 
-                        value={edited.email} onChange={onEditChange} /></div>
-                        <div>Phone: <input className='border-2 border-gray-100' type="text" name="phone" 
-                        value={edited.phone} onChange={onEditChange} /></div>
-                        <div>Website: <input className='border-2 border-gray-100' type="text" name="website" 
-                        value={edited.website} onChange={onEditChange} /></div>
+                        <div>Title: <input className='border-2 border-gray-100' type="text" name="title" 
+                        value={edited.title} onChange={onEditChange} /></div>
+                        <div>Check: <input className='border-2 border-gray-100' type="text" name="check" 
+                        value={edited.check} onChange={onEditChange} /></div>
+                        <div>Schedule: <input className='border-2 border-gray-100' type="text" name="schedule" 
+                        value={edited.schedule} onChange={onEditChange} /></div>
                     </div>
                     <div className="flex justify-end items-center w-100 border-t p-3">
                         <button className="bg-red-600 hober:bg-red-700 px-3 py-1 rounded text-white 
