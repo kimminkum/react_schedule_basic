@@ -9,13 +9,23 @@ const Post = ({onSaveData}) => {
         schedule: '',
     });
 
-    const handleChange = (e) => {
-        const {title, value} = e.target;
-        setForm({
+    // const handleChange = (e) => {
+    //     const {title, value} = e.target;
+    //     setForm({
+    //         ...form,
+    //         [title]: value,
+    //     })
+    // };
+
+    function handleChange(e) {
+        console.log(e.target.value); //이렇게!
+        setForm((prevFormData) => {
+        return {
             ...form,
-            [title]: value
-        })
-    };
+            [e.target.name]: e.target.value,
+        };
+        });
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -44,12 +54,13 @@ const Post = ({onSaveData}) => {
                     </label>
                     <label htmlFor='check' className='w-full flex-1 mx-2 text-xs font-semibold 
                     text-gray-600 uppercase'>Check
-                        <input className='w-full py-3 px-1 mt-1 
+                        {/* <input className='w-full py-3 px-1 mt-1 
                         text-gray-800 appearance-none 
                         border-2 border-gray-100 
                         focus:text-gray-500 focus:outline-none focus:border-gray-200'
                             required placeholder='체크 여부' type='radio' name='check' 
-                            value={form.check} onChange={handleChange} />
+                            value={form.check} onChange={handleChange} /> */}
+                        <input required placeholder='체크 여부' type='radio' name='check' value={form.check} onChange={handleChange}  />
                     </label>
                 </div>
                 <div className="flex flex-col md:flex-row">
