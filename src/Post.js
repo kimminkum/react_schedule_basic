@@ -52,16 +52,16 @@ const Post = ({onSaveData}) => {
                             required placeholder='일정 제목을 입력해주세요' type='text' name='title' 
                             value={form.title} onChange={handleChange} />
                     </label>
-                    <label htmlFor='check' className='w-full flex-1 mx-2 text-xs font-semibold 
-                    text-gray-600 uppercase'>Check
+                    {/* <label htmlFor='check' className='w-full flex-1 mx-2 text-xs font-semibold 
+                    text-gray-600 uppercase'>Check */}
                         {/* <input className='w-full py-3 px-1 mt-1 
                         text-gray-800 appearance-none 
                         border-2 border-gray-100 
                         focus:text-gray-500 focus:outline-none focus:border-gray-200'
                             required placeholder='체크 여부' type='radio' name='check' 
                             value={form.check} onChange={handleChange} /> */}
-                        <input required placeholder='체크 여부' type='radio' name='check' value={form.check} onChange={handleChange}  />
-                    </label>
+                        {/* <input required placeholder='체크 여부' type='radio' name='check' value={form.check} onChange={handleChange}  /> */}
+                    {/* </label> */}
                 </div>
                 <div className="flex flex-col md:flex-row">
                     <label htmlFor="schedule" className="w-full flex-1 mx-2 text-xs font-semibold 

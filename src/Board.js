@@ -13,7 +13,7 @@ const Board = () => {
 
     //고유 값으로 사용 될 id
     //ref 를 사용하여 변수 담기
-    const nextId = useRef(2);
+    const nextId = useRef(1);
 
 //더미 데이터 호출
     // useEffect(() => {
