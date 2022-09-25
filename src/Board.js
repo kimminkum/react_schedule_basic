@@ -60,7 +60,7 @@ const Board = () => {
     }
 
     const handleRemove = (id) => {
-        setInfo(info => info.fillter(item => item.id !== id));
+        setInfo(info.filter(item => item.id !== id));
     }
 
     const handleEdit = (item) => {
@@ -86,7 +86,7 @@ const Board = () => {
     }
 
     return (
-        <div className='container max-w-screen-2xl  mx-auto'>
+        <div className='container max-w-full mx-auto'>
             {/* <div className='text-xl font-bold mt-5 mb-3 text-center'>고객 정보 리스트</div> */}
             <table className='min-w-full table-auto text-gray-800'>
                 <thead className='justify-between'>

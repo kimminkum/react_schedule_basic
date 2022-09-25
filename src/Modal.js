@@ -30,7 +30,7 @@ const Modal = ({selectedData, handleCancel, handleEditSubmit}) => {
                     <i className='fas fa-times cursor-pointer' onClick={onCancel}></i>
                 </div>
                 <form onSubmit={onSubmitEdit}>
-                    <div class="p-3">
+                    <div className="p-3">
                         <div>ID: {edited.id}</div>
                         <div>Title: <input className='border-2 border-gray-100' type="text" name="title" 
                         value={edited.title} onChange={onEditChange} /></div>
