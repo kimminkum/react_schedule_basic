@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 // import axios from 'axios';
 import Tr from './Tr';
 import Post from './Post';
@@ -15,7 +15,7 @@ const Board = () => {
     //ref 를 사용하여 변수 담기
     const nextId = useRef(1);
 
-//더미 데이터 호출
+    //더미 데이터 호출
     // useEffect(() => {
     //     axios.get('https://jsonplaceholder.typicode.com/users')
     //         .then(res => setInfo(res.data))
@@ -24,7 +24,7 @@ const Board = () => {
 
     const handleSave = (data) => {
         //데이터 수정하기(중요)
-        if(data.id) { //수정 데이터에는 id가 존재
+        if (data.id) { //수정 데이터에는 id가 존재
             setInfo(
                 info.map(row => data.id === row.id ? { //가져온 id가 기존 id와 같으면
                     //가져온 데이터 반영
@@ -49,10 +49,10 @@ const Board = () => {
             //데이터 추가하기 방법2
             setInfo(info => info.concat(
                 {
-                    id:nextId.current,
-                    title:data.title,
-                    check:data.check,
-                    schedule:data.schedule,
+                    id: nextId.current,
+                    title: data.title,
+                    check: data.check,
+                    schedule: data.schedule,
                 }
             ))
             nextId.current += 1;
@@ -91,7 +91,7 @@ const Board = () => {
             <table className='min-w-full table-auto text-gray-800'>
                 <thead className='justify-between'>
                     <tr className='bg-gray-800'>
-                        <th className="text-gray-300 px-4 py-3">Id.</th>
+                        {/* <th className="text-gray-300 px-4 py-3">Id.</th> */}
                         <th className="text-gray-300 px-4 py-3">title</th>
                         <th className="text-gray-300 px-4 py-3">check</th>
                         <th className="text-gray-300 px-4 py-3">Schedule</th>
@@ -103,7 +103,7 @@ const Board = () => {
             </table>
             <Post onSaveData={handleSave} />
             {modalOn && <Modal selectedData={selected} handleCancel={handleCancel}
-            handleEditSubmit={handleEditSubmit} />}
+                handleEditSubmit={handleEditSubmit} />}
         </div>
     );
 };

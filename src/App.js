@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from "./Button/Button";
-import Sbutton from "./Button/Sbutton";
+// import Sbutton from "./Button/Sbutton";
 import Board from "./Board";
 import { FaTwitch } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
-import { BsFillPencilFill, BsTable } from 'react-icons/bs';
+// import { BsFillPencilFill, BsTable } from 'react-icons/bs';
 
 
 function App() {

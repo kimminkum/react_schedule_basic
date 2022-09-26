@@ -31,7 +31,7 @@ const Modal = ({selectedData, handleCancel, handleEditSubmit}) => {
                 </div>
                 <form onSubmit={onSubmitEdit}>
                     <div className="p-3">
-                        <div>ID: {edited.id}</div>
+                        {/* <div>ID: {edited.id}</div> */}
                         <div>Title: <input className='border-2 border-gray-100' type="text" name="title" 
                         value={edited.title} onChange={onEditChange} /></div>
                         <div>Check: <input className='border-2 border-gray-100' type="text" name="check" 
