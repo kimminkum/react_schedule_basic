@@ -16,7 +16,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: rgb(181, 214, 146);
+  background-color: #f7f7f7;
   color: rgb(26, 23, 23);
 }
 
@@ -32,7 +32,7 @@ a{
   padding-bottom: 6px;
   border-bottom: 1px solid #808080;
   width: 100%;
-  background-color: rgb(163, 204, 163);
+  background-color: #efeef2;
 }
 
 .header .header_title{
@@ -51,6 +51,16 @@ a{
 
 .header_links .header_links_icons li{
   padding: 0px 12px;
+  color:#000066;
+}
+
+.header_links .header_links_icons li :active,
+.header_links .header_links_icons li :hover,
+.header_links .header_links_icons li :focus
+.header_links .header_links_icons li :after{
+  opacity: 1;
+  transition: .5s;
+  color:red;
 }
 
 
@@ -61,14 +71,16 @@ a{
   padding: 6px;
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 .schedule {
   margin: 6px 48px;
-  width: 92%;
   padding: 0;
-  background-color: rgb(153, 203, 250);
+  background-color: rgb(195, 210, 238);
   border-radius: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .schedule .schedule_table{

@@ -16,7 +16,7 @@ function App() {
 
         {/* 제목 */}
         <div className="header_title">
-          <h3> 일과 스케줄 표 </h3>
+          <h3><b>일과 스케줄 표</b></h3>
         </div>
 
         {/* 링크 */}
@@ -30,10 +30,10 @@ function App() {
 
       <div className='main'>
         {/* 스케쥴 표 버튼과 생성, 수정, 삭제 버튼  */}
-        <div className="optionbar">
+        {/* <div className="optionbar">
           <Button>1</Button>
           <Button>+</Button>
-        </div>
+        </div> */}
       </div>
 
       <div className='schedule'>
